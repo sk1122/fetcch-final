@@ -28,6 +28,16 @@ import Developers from "@/components/developers.astro"
           font-family: "Inter var", sans-serif;
         }
       }
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .hideScrollbar::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .hideScrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
     </style>
   </head>
   <body>
