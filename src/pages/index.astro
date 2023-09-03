@@ -18,8 +18,15 @@ import Developers from "@/components/developers.astro"
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <title>Fetcch</title>
-    <style>
+    <style is:global>
       :root {
         font-family: "Inter", sans-serif;
       }
@@ -28,11 +35,18 @@ import Developers from "@/components/developers.astro"
           font-family: "Inter var", sans-serif;
         }
       }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Manrope", sans-serif;
+      }
       /* Hide scrollbar for Chrome, Safari and Opera */
       .hideScrollbar::-webkit-scrollbar {
         display: none;
       }
-
       /* Hide scrollbar for IE, Edge and Firefox */
       .hideScrollbar {
         -ms-overflow-style: none; /* IE and Edge */
