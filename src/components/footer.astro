@@ -1,0 +1,57 @@
+---
+import products from "@/public/assets/products.png"
+import siteLogo from "@/public/logo.svg"
+---
+
+<footer class="w-full pt-12 h-fit">
+  <div class="container pb-12">
+    <div
+      class="min-h-32 h-fit flex flex-col md:flex-row items-start pb-12 justify-between"
+    >
+      <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0">
+        <img src={products.src} alt="decoration" class="w-32" />
+        <div class="flex flex-col ml-8 justify-center">
+          <img src={siteLogo.src} alt="logo" class="w-20" />
+          <p class="mt-4 text-sm">A Web3 Pull Layer Platform</p>
+        </div>
+      </div>
+      <div class="flex w-full justify-end mt-6 md:mt-0 max-w-sm">
+        <div
+          class="rounded-full p-1 md:border sm:border-neutral-600 flex flex-col space-y-2 md:space-y-0 md:flex-row w-full md:w-fit"
+        >
+          <input
+            type="email"
+            placeholder="Enter your Email"
+            class="px-4 rounded-full md:rounded-l-full md:border-none outline-none focus:outline-none focus:border-none ring-0 focus:ring-0 text-sm border border-neutral-600"
+          />
+          <button
+            class="text-white bg-primary rounded-full px-3 py-2 lg:px-6 lg:py-3 text-sm cursor-pointer"
+            >Subscribe</button
+          >
+        </div>
+      </div>
+    </div>
+    <!-- links -->
+    <ul
+      class="flex md:space-x-4 space-x-0 lg:space-x-8 text-sm flex-col md:flex-row flex-wrap items-start md:items-center space-y-2 md:space-y-0"
+    >
+      <li class="cursor-pointer hover:text-primary">About Us</li>
+      <li class="cursor-pointer hover:text-primary">FAQs</li>
+      <li class="cursor-pointer hover:text-primary">Work With Us</li>
+      <li class="cursor-pointer hover:text-primary">Socials</li>
+      <li class="cursor-pointer hover:text-primary">Research / Writings</li>
+      <li class="cursor-pointer hover:text-primary">Integrate</li>
+    </ul>
+  </div>
+  <div class="w-full bg-[#263238] py-12">
+    <div
+      class="container text-white flex items-center justify-between flex-col md:flex-row space-y-6 md:space-x-0 text-sm lg:text-base"
+    >
+      <span>&copy; 2023 Fetcch . All Rights Reserved</span>
+      <ul class="flex items-center space-x-6">
+        <li>Terms of Use</li>
+        <li>Privacy Policy</li>
+      </ul>
+    </div>
+  </div>
+</footer>

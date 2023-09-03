@@ -1,0 +1,67 @@
+---
+import mesh from "@/public/assets/mesh.svg"
+import hero from "@/public/assets/hero.png"
+import brand from "@/public/assets/brand.png"
+---
+
+<section class="w-full mx-auto relative isolate">
+  <img
+    src={mesh.src}
+    alt="hero_background"
+    class="w-full hidden lg:flex absolute inset-0 -z-20"
+  />
+  <!-- hero -->
+  <div
+    class="mx-auto container lg:flex lg:items-center lg:gap-x-10 overflow-hidden"
+  >
+    <div class="mx-auto max-w-2xl lg:mx-0 lg:flex-auto mt-16">
+      <h1
+        class="mt-10 max-w-lg text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl prose"
+      >
+        Web 3.0 Pull Payments Layer
+      </h1>
+      <p class="mt-6 text-lg leading-8 text-gray-600 prose">
+        Fetcch is the first middleware layer that enables wallets and
+        applications to send chain-agnostic transaction requests directly to the
+        user's end-point.
+      </p>
+      <div class="mt-10 flex items-center gap-x-6">
+        <button
+          class="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary flex items-center space-x-2"
+        >
+          <span> Schedule Demo</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-4 h-4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="lg:flex-shrink-0 lg:flex-grow mt-8">
+      <img
+        src={hero.src}
+        alt="hero image"
+        class="mx-auto w-[62.875rem] max-w-full lg:-mr-24"
+      />
+    </div>
+  </div>
+  <!-- brands -->
+  <div
+    class="w-full mx-auto flex overflow-hidden space-x-4 justify-center items-end py-20 container"
+  >
+    <img src={brand.src} alt="brand image" />
+    <img src={brand.src} alt="brand image" />
+    <img src={brand.src} alt="brand image" />
+    <img src={brand.src} alt="brand image" />
+    <img src={brand.src} alt="brand image" />
+  </div>
+</section>

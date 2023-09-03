@@ -1,0 +1,59 @@
+---
+import Hero from "@/components/hero.astro"
+import MainNav from "../components/main-nav.astro"
+import Features from "@/components/features.astro"
+import Products from "@/components/products.astro"
+import UseCases from "@/components/use-cases.astro"
+import Research from "@/components/research.astro"
+import Contact from "@/components/contact.astro"
+import Footer from "@/components/footer.astro"
+import Developers from "@/components/developers.astro"
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <title>Fetcch</title>
+    <style>
+      :root {
+        font-family: "Inter", sans-serif;
+      }
+      @supports (font-variation-settings: normal) {
+        :root {
+          font-family: "Inter var", sans-serif;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- announcement -->
+    <div
+      class="w-full flex items-center py-2 justify-center space-x-3 text-xs sm:text-sm md:text-base"
+    >
+      <div
+        class="border-2 border-border font-semibold md:text-sm rounded-full px-3 py-1 bg-[#F1F1F2]"
+      >
+        Announcement
+      </div>
+      <span class="font-medium text-neutral_text"
+        >We are happy to announce that we raise $2 Million in Funding</span
+      >
+    </div>
+    <header class="py-4 border-y-2 border-border sticky top-0 bg-white z-30">
+      <MainNav />
+    </header>
+    <Hero />
+    <Features />
+    <Developers />
+    <Products />
+    <UseCases />
+    <Research />
+    <Contact />
+    <Footer />
+  </body>
+</html>
