@@ -4,6 +4,34 @@ import hero from "@/public/assets/hero.png"
 import brand from "@/public/assets/brand.png"
 ---
 
+<style>
+  .marquee {
+    --gap: 1rem;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+  }
+
+  .marquee__content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap);
+    animation: scroll 10s linear infinite;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+</style>
+
 <section class="w-full bg-white pb-20">
   <div class="relative isolate">
     <img
@@ -59,45 +87,83 @@ import brand from "@/public/assets/brand.png"
   </div>
 
   {/* Logo brands */}
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div
-      class="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-5"
-    >
-      <img
-        src={brand.src}
-        alt="brand image"
-        class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-        width={158}
-        height={48}
-      />
-      <img
-        src={brand.src}
-        alt="brand image"
-        class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-        width={158}
-        height={48}
-      />
-      <img
-        src={brand.src}
-        alt="brand image"
-        class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-        width={158}
-        height={48}
-      />
-      <img
-        src={brand.src}
-        alt="brand image"
-        class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-        width={158}
-        height={48}
-      />
-      <img
-        src={brand.src}
-        alt="brand image"
-        class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-        width={158}
-        height={48}
-      />
+  <div class="mx-auto max-w-7xl px-6 lg:px-8 mt-20 lg:mt-0">
+    <div class="marquee">
+      <ul class="marquee__content">
+        <img
+          src={brand.src}
+          alt="brand image"
+          class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+          width={158}
+          height={48}
+        />
+        <img
+          src={brand.src}
+          alt="brand image"
+          class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+          width={158}
+          height={48}
+        />
+        <img
+          src={brand.src}
+          alt="brand image"
+          class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+          width={158}
+          height={48}
+        />
+        <img
+          src={brand.src}
+          alt="brand image"
+          class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+          width={158}
+          height={48}
+        />
+        <img
+          src={brand.src}
+          alt="brand image"
+          class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+          width={158}
+          height={48}
+        />
+      </ul>
+      <!-- Mirrors the content above -->
+      <ul class="marquee__content" aria-hidden="true">
+        <img
+          src={brand.src}
+          alt="brand image"
+          class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+          width={158}
+          height={48}
+        />
+        <img
+          src={brand.src}
+          alt="brand image"
+          class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+          width={158}
+          height={48}
+        />
+        <img
+          src={brand.src}
+          alt="brand image"
+          class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+          width={158}
+          height={48}
+        />
+        <img
+          src={brand.src}
+          alt="brand image"
+          class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+          width={158}
+          height={48}
+        />
+        <img
+          src={brand.src}
+          alt="brand image"
+          class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+          width={158}
+          height={48}
+        />
+      </ul>
     </div>
   </div>
 </section>
