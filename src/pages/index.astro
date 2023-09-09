@@ -8,6 +8,7 @@ import Research from "@/components/research.astro"
 import Contact from "@/components/contact.astro"
 import Footer from "@/components/footer.astro"
 import Developers from "@/components/developers.astro"
+import { Tooltips } from "astro-tooltips"
 ---
 
 <html lang="en">
@@ -53,28 +54,16 @@ import Developers from "@/components/developers.astro"
         scrollbar-width: none; /* Firefox */
       }
     </style>
+    <Tooltips interactive={false} delay={[15, 15]} />
   </head>
   <body>
-    <!-- announcement -->
-    <div
-      class="w-full flex items-center py-2 justify-center space-x-3 text-xs sm:text-sm md:text-base max-w-7xl mx-auto"
-    >
-      <div
-        class="border-2 border-border font-semibold md:text-sm rounded-full px-3 py-1 bg-[#F1F1F2]"
-      >
-        Announcement
-      </div>
-      <span class="font-medium text-neutral_text"
-        >We are happy to announce that we raise $2 Million in Funding</span
-      >
-    </div>
-    <header class="py-4 border-y-2 border-border sticky top-0 bg-white z-30">
+    <header class="border-y-2 border-border sticky top-0 bg-white z-30">
       <MainNav />
     </header>
     <Hero />
     <Features />
     <Developers />
-    <Products />
+    <!-- <Products /> -->
     <UseCases />
     <Research />
     <Contact />

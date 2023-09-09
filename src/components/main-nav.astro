@@ -3,28 +3,35 @@ import siteLogo from "@/public/logo.svg"
 ---
 
 <div
-  class="flex w-full items-center justify-between mx-auto container bg-white max-w-7xl"
+  class="flex w-full items-center h-16 justify-between mx-auto bg-white max-w-7xl container"
 >
   <img src={siteLogo.src} class="w-20 h-fit" alt="site_logo" />
   <ul class="hidden md:flex items-center space-x-8">
     <li
       class="cursor-pointer hover:text-primary duration-300 font-medium text-neutral_text"
+      title="Coming Soon"
+      data-tooltip-placement="left"
     >
-      Products
+      <a href="#">Products</a>
     </li>
     <li
       class="cursor-pointer hover:text-primary duration-300 font-medium text-neutral_text"
+      title="Coming Soon"
+      data-tooltip-placement="bottom"
     >
-      Learn
+      <a href="#">Learn</a>
     </li>
     <li
       class="cursor-pointer hover:text-primary duration-300 font-medium text-neutral_text"
+      title="Coming Soon"
+      data-tooltip-placement="right"
     >
-      UseCases
+      <a href="#">UseCases</a>
     </li>
   </ul>
   <button
     class="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+    title="Coming Soon"
   >
     Experience Us</button
   >
