@@ -4,28 +4,43 @@ import siteLogo from "@/public/logo.svg"
 ---
 
 <script>
-  const emailId = document.getElementById("email")
-  const btn = document.querySelector("#btn")
+  const emailForm = document.getElementById("emailForm") as HTMLFormElement
 
-  btn.addEventListener("click", async () => {
-    const email = (emailId as any).value
+  const subEmail = document.getElementById("subEmail") as HTMLInputElement
 
-    const res = await fetch("https://wallet-api.fetcch.xyz/add-email-for-website", {
-      method: "POST",
-      body: JSON.stringify({
-        email
-      }),
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
+  emailForm.addEventListener("submit", async (e) => {
+    e.preventDefault()
+    if (subEmail.value == "") {
+      alert("Email must be provided !")
+    } else {
+      const res = await fetch(
+        "https://wallet-api.fetcch.xyz/add-email-for-website",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            email: subEmail.value,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        },
+      )
+      const successMsg = document.getElementById(
+        "successMsg",
+      ) as HTMLParagraphElement
+      if (!res.ok) {
+        successMsg.innerText = "Something went wrong! Please try again."
+        successMsg.classList.toggle("hidden")
+      } else {
+        console.log(subEmail.value)
+        subEmail.value = ""
+        successMsg.classList.toggle("hidden")
       }
-    })
-    
-    document.getElementById("text").classList.toggle("hidden")
-
-    setTimeout(() => {
-      document.getElementById("text").classList.toggle("hidden")
-    }, 10000)
+      setTimeout(() => {
+        successMsg.classList.toggle("hidden")
+      }, 1000)
+    }
   })
 </script>
 
@@ -41,24 +56,28 @@ import siteLogo from "@/public/logo.svg"
           <p class="mt-4 text-sm">A Web3 Pull Layer Platform</p>
         </div>
       </div>
-      <div class="flex w-full justify-center items-center flex-col mt-6 md:mt-0 max-w-sm">
-        <div
+      <div
+        class="flex w-full justify-center items-center flex-col mt-6 md:mt-0 max-w-sm"
+      >
+        <form
+          id="emailForm"
           class="rounded-full p-1 md:border sm:border-neutral-600 flex flex-col space-y-2 md:space-y-0 md:flex-row w-full md:w-fit"
         >
           <input
             type="email"
-            id="email"
+            id="subEmail"
             pattern="[^ @]*@[^ @]*"
             placeholder="Enter your Email"
             class="px-4 rounded-full md:rounded-l-full md:border-none outline-none focus:outline-none focus:border-none ring-0 focus:ring-0 text-sm border border-neutral-600"
           />
           <button
-            id="btn"
             class="text-white bg-primary rounded-full px-3 py-2 lg:px-6 lg:py-3 text-sm cursor-pointer"
             >Subscribe</button
           >
-        </div>
-        <p id="text" class="hidden text-sm text-center text-green-500">Successfully Added Email to Waitlist!</p>
+        </form>
+        <p id="successMsg" class="hidden text-xs mt-1 text-center text-primary">
+          Successfully Added Email to Waitlist!
+        </p>
       </div>
     </div>
     <!-- links -->
@@ -73,13 +92,12 @@ import siteLogo from "@/public/logo.svg"
         <a href="https://twitter.com/FetcchX" target="_blank">Twitter</a>
       </li>
       <li class="cursor-pointer hover:text-primary">
-        <a href="https://writings.fetcch.xyz/" target="_blank"
-          >Writings</a
-        >
+        <a href="https://writings.fetcch.xyz/" target="_blank">Writings</a>
       </li>
       <li class="cursor-pointer hover:text-primary">
-        <a href="https://docs.fetcch.xyz/how-to-integrate/quickstart" target="_blank"
-          >Integrate</a
+        <a
+          href="https://docs.fetcch.xyz/how-to-integrate/quickstart"
+          target="_blank">Integrate</a
         >
       </li>
     </ul>
