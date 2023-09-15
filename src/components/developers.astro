@@ -1,5 +1,6 @@
 ---
 import developers from "@/public/assets/developers.png"
+import { Image } from "astro:assets"
 ---
 
 <section class="w-full pt-24 bg-[#263035] min-h-[730px] flex items-center">
@@ -8,7 +9,7 @@ import developers from "@/public/assets/developers.png"
   >
     <!-- image -->
     <div class="col-span-full md:col-span-1">
-      <img src={developers.src} alt="code image" />
+      <Image src={developers} alt="code image" />
     </div>
     <!-- right text -->
     <div

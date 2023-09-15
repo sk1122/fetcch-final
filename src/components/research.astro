@@ -2,6 +2,7 @@
 import research from "@/public/assets/research.png"
 import research2 from "@/public/assets/research2.png"
 import research3 from "@/public/assets/research3.png"
+import { Image } from "astro:assets"
 ---
 
 <section
@@ -17,7 +18,7 @@ import research3 from "@/public/assets/research3.png"
         class="bg-white p-4 rounded-lg col-span-full md:col-span-1 shadow-2xl"
       >
         <div class="bg-[#F6F9FC]">
-          <img src={research.src} alt="blog image" />
+          <Image src={research} alt="blog image" />
         </div>
         <h2 class="text-xl font-semibold my-4">
           How to think about Cross Chain CoWSwap?
@@ -34,7 +35,7 @@ import research3 from "@/public/assets/research3.png"
         class="bg-white p-4 rounded-lg col-span-full md:col-span-1 shadow-2xl"
       >
         <div class="bg-[#F6F9FC]">
-          <img src={research2.src} alt="blog image" />
+          <Image src={research2} alt="blog image" />
         </div>
         <h2 class="text-xl font-semibold my-4">
           Multichain Account Abstraction Using Fetcch
@@ -51,7 +52,7 @@ import research3 from "@/public/assets/research3.png"
         class="bg-white p-4 rounded-lg col-span-full md:col-span-1 shadow-2xl"
       >
         <div class="bg-[#F6F9FC]">
-          <img src={research3.src} alt="blog image" />
+          <Image src={research3} alt="blog image" />
         </div>
         <h2 class="text-xl font-semibold my-4">
           The State of DPN (Decentralized Paym...

@@ -1,11 +1,12 @@
 ---
 import siteLogo from "@/public/logo.svg"
+import { Image } from "astro:assets"
 ---
 
 <div
   class="flex w-full items-center h-16 justify-between mx-auto bg-white max-w-7xl container"
 >
-  <img src={siteLogo.src} class="w-20 h-fit" alt="site_logo" />
+  <Image src={siteLogo} class="w-20 h-fit" alt="site_logo" />
   <ul class="hidden md:flex items-center space-x-8">
     <li
       class="cursor-pointer hover:text-primary duration-300 font-medium text-neutral_text"
