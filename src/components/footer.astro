@@ -1,6 +1,7 @@
 ---
 import products from "@/public/assets/products.png"
 import siteLogo from "@/public/logo.svg"
+import { Image } from "astro:assets"
 ---
 
 <script>
@@ -49,9 +50,9 @@ import siteLogo from "@/public/logo.svg"
       class="min-h-32 h-fit flex flex-col md:flex-row items-start pb-12 justify-between"
     >
       <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0">
-        <img src={products.src} alt="decoration" class="w-32" />
+        <Image src={products} alt="decoration" class="w-32" />
         <div class="flex flex-col sm:ml-8 justify-center">
-          <img src={siteLogo.src} alt="logo" class="w-20" />
+          <Image src={siteLogo} alt="logo" class="w-20" />
           <p class="mt-4 text-sm">A Web3 Pull Layer Platform</p>
         </div>
       </div>

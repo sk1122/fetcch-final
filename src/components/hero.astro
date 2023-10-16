@@ -1,6 +1,7 @@
 ---
 import mesh from "@/public/assets/mesh.svg"
 import hero from "@/public/assets/hero.svg"
+import { Image } from "astro:assets"
 ---
 
 <style>
@@ -33,9 +34,9 @@ import hero from "@/public/assets/hero.svg"
 
 <section class="w-full bg-white pb-20">
   <div class="relative isolate">
-    <img
-      src={mesh.src}
-      alt="hero_background"
+    <Image
+      src={mesh}
+      alt="hero backkground"
       class="w-full hidden lg:flex h-full absolute inset-0 -z-10 mt-6"
     />
     <div class="mx-auto max-w-7xl sm:py-16 lg:flex lg:items-center lg:gap-x-10">
@@ -76,56 +77,57 @@ import hero from "@/public/assets/hero.svg"
       <div
         class="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow overflow-hidden"
       >
-        <img
-          src={hero.src}
+        <Image
+          src={hero}
           alt="hero image"
-          class="mx-auto w-[52.875rem] max-w-full -mr-20 scale-110"
+          class="mx-auto xl:w-[52.875rem] max-w-full -mr-20 scale-110"
+          loading="eager"
         />
       </div>
     </div>
-    <p class="text-center mt-10 md:mt-0 mb-10">Backed By</p>
+    <p class="text-center text-2xl font-bold mt-10 md:mt-0 mb-10">Backed By</p>
   </div>
 
   {/* Logo brands */}
   <div class="mx-auto max-w-7xl px-6 lg:px-8 mt-8 lg:mt-0">
     <div class="marquee">
       <ul class="marquee__content">
-        <img
-          src="https://hashkey.capital/images/logo.svg"
+        <Image
+          src="/assets/hashkey.svg"
           alt="brand image"
           class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
           width={158}
           height={48}
         />
-        <img
-          src="https://appworks.tw/wp-content/themes/appworks-2019M75/images/appworks.svg"
+        <Image
+          src="/assets/appworks.svg"
           alt="brand image"
           class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
           width={158}
           height={48}
         />
-        <img
+        <Image
           src="/assets/capital.png"
           alt="brand image"
           class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
           width={158}
           height={48}
         />
-        <img
-          src="https://momentum6.com/image/logo-black-full.svg"
+        <Image
+          src="/assets/momentum.svg"
           alt="brand image"
           class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
           width={158}
           height={48}
         />
-        <img
+        <Image
           src="/assets/compute.png"
           alt="compute"
           class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
           width={158}
           height={48}
         />
-        <img
+        <Image
           src="/assets/gravity.png"
           alt="brand image"
           class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
@@ -135,42 +137,42 @@ import hero from "@/public/assets/hero.svg"
       </ul>
 
       <ul class="marquee__content" aria-hidden="true">
-        <img
-          src="https://hashkey.capital/images/logo.svg"
+        <Image
+          src="/assets/hashkey.svg"
           alt="brand image"
           class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
           width={158}
           height={48}
         />
-        <img
-          src="https://appworks.tw/wp-content/themes/appworks-2019M75/images/appworks.svg"
+        <Image
+          src="/assets/appworks.svg"
           alt="brand image"
           class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
           width={158}
           height={48}
         />
-        <img
+        <Image
           src="/assets/capital.png"
           alt="brand image"
           class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
           width={158}
           height={48}
         />
-        <img
-          src="https://momentum6.com/image/logo-black-full.svg"
+        <Image
+          src="/assets/momentum.svg"
           alt="brand image"
           class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
           width={158}
           height={48}
         />
-        <img
+        <Image
           src="/assets/compute.png"
           alt="compute"
           class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
           width={158}
           height={48}
         />
-        <img
+        <Image
           src="/assets/gravity.png"
           alt="brand image"
           class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
