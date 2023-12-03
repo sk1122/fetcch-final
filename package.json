@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.0.0",
-    "@headlessui/react": "^1.7.17",
     "astro": "^3.0.7",
     "astro-tooltips": "^0.6.2",
     "google-spreadsheet": "^4.0.3",
