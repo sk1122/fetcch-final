@@ -1,6 +1,50 @@
 ---
 import MainNav from "../components/main-nav.astro"
+import DownloadIcon from '@/public/assets/download.svg'
+import ClockIcon from '@/public/assets/clock.svg'
+import Tag from '../components/report-page/tags.astro'
+import { Image } from "astro:assets"
+import icon1 from '@/public/assets/icons/facebook.svg'
+import icon2 from '@/public/assets/icons/linkedin.svg'
+import icon3 from '@/public/assets/icons/twitter.svg'
+import icon4 from '@/public/assets/icons/mail.svg'
+import Footer from "@/components/footer.astro"
+
+
+const indexData = ["Introduction","The Science Behind Positive Thinking:","Building Resilience","Attracting Opportunities","Nurturing Well-being and Mental Health","Unleashing Creativity and Problem-Solving"]
+const TagsData = ["Smart Bets","Creative Strategy"]
+const socialData = [{
+  url:"/",
+  logo:icon1
+},
+{
+  url:"/",
+  logo:icon2
+},
+{
+  url:"/",
+  logo:icon3
+}
+,
+{
+  url:"/",
+  logo:icon4
+}]
+let isopen =false;
+const handleclick = ()=>{
+  console.log(isopen);
+}
 ---
+
+<script> 
+  const modalBtn = document.querySelector("#downloadPdf")
+  modalBtn?.addEventListener('click',()=>{
+    console.log("clicked");
+  })
+</script>
+<style>
+
+</style>
 
 <html lang="en">
 <head>
@@ -9,23 +53,139 @@ import MainNav from "../components/main-nav.astro"
   <title>Report</title>
 </head>
 <body>
+    <!-- Modal -->
+    <div class="popup-modal absolute w-full h-full z-50 flex items-center justify-center ">
+      <div class="w-full h-full blur-md"/>
+      <div class="bg-white rounded-[18px] p-10 w-[786px] h-[236px] m-auto">
+        <div></div>
+        
+      </div>
+    </div>
+  <!-- Navbar -->
   <header class="border-y-2 border-border sticky top-0 bg-white z-30">
     <MainNav />
   </header>
-  <div class="container mt-[90px] mb-[50px] ">
+  <!-- report page section -->
+  <div class="container mt-[90px] mb-[50px]">
     <h1 class="text-6xl !leading-[72px] mb-8 font-bold">Unlocking the next wave of adoption in crypto through trust</h1>
     <div class="w-full h-[391px] bg-slate-500 rounded-xl">
       <!-- Image here -->
     </div>
   </div>
-  <div class="container">
+  <div class="container flex gap-[124px] mb-48">
     <!-- Side bar -->
-    <div>
-      <button>
-        <p>Download Report</p>
-        
+    <div class="w-fit">
+      <button class="flex bg-primary text-white rounded-lg gap-[13px] h-[52px] items-center justify-center p-5 text-[18.2px] leading-[26px] font-bold overflow-hidden" id="downloadPdf">
+        <p class="shrink-0">Download Report</p>
+        <Image src={DownloadIcon} alt="downloadicon" />
       </button>
+      <div class="pt-5 mx-[18px] ">
+        <!-- Download section -->
+        <div class="mb-6">
+          <div class="flex gap-4 items-center">
+            <Image src={ClockIcon} alt={"clock icon"}/>
+            <p class="text-base font-semibold">7 min read</p>
+          </div>
+          <!-- grey divider -->
+          <div class="w-full h-2 bg-primary opacity-10 mt-4"/>
+        </div>
+        <!-- Index section -->
+        <div class="py-6 flex flex-col gap-4 w-48 border-y">
+          {
+            indexData.map((ele,idx)=>
+            <div>
+              {ele}
+              </div>
+            )
+          }
+        </div>
+        <!-- Tags section -->
+        <div class="my-6">
+          <h2 class="text-sm uppercase font-semibold">
+            Tags
+          </h2>
+          <div class="flex flex-col gap-2 mt-4">
+            {
+              TagsData.map((tag,idx)=>
+              <Tag label={tag} />
+              )
+            }
+          </div>
+        </div>
+        <div class="my-6">
+          <p class="uppercase text-sm font-semibold">
+            Share the article
+          </p>
+          <div class="flex gap-4 mt-4">
+            {
+              socialData.map((ele,idx)=>(
+              <a href={ele.url}>
+              <Image src={ele.logo} class={"bg-primary rounded-full w-8 h-8 p-[6px]"} alt={"social media icon"}/>
+            </a>
+              ))
+            }
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Text section -->
+    <div>
+      <h1 class="text-[40px] leading-[50px] font-bold">
+        Introduction
+      </h1>
+      <div class="mt-[27px]">
+        <div class="flex flex-col gap-[22px] text-[20px] leading-[30px]">
+          <p class="font-semibold">The evolution of crypto is movement to mainstream trusted brands.</p>
+          <p>We conducted this global study to evaluate exactly how consumer perceptions of trust,
+            engagement, and utility have shifted over the past 12 months. What we learned is that
+            consumers resoundingly want to engage in crypto and digital assets, but ‘Trust
+            Matters’.</p>
+            <p>
+              This study – the first of its kind – provides definitive data on consumer behavior in
+              relation to crypto. The data clearly shows that, despite some of the challenges of the
+              past year, crypto is here to stay: consumers are maintaining or increasing their
+              engagement, they are holding their providers to higher standards, and traditional
+              brands are seeing upside from integrating crypto into their offering. A tangible
+              illustration of this is how Zero Hash powers
+              Stripe’s crypto payments experience, making it easier to interact with web3 merchants
+              and apps, through a checkout flow as simple as making a purchase on Amazon.
+            </p>
+            <p>
+              The most impactful conclusion from the study is the fundamental shift in how
+              consumers want to access crypto. Consumers resoundingly want to engage with
+              brands they know and trust. The boundaries between traditional finance and crypto
+              are blurring, as consumers look to traditional companies to access Web3 products that
+              offer greater speed, security, and flexibility.
+            </p>
+            <p>
+              There is a trend of convergence of companies building and launching crypto offerings
+              to their large customer bases. PayPal and Cash App’s recent revenue
+              announcements have demonstrated continued appetite from consumers to engage in
+              crypto. More fundamentally around cryptograph technology, the aggregate
+              transaction value of fiat-backed stablecoins surpassed the transaction volume of
+              Mastercard and PayPal combined
+            </p>
+            <p>
+              Another burgeoning use case where we expect the convergence of traditional
+              companies is in the use case of cross border payments, specifically, payroll. Crypto
+              payments are attractive to people who use cryptocurrencies as a hedge against local
+              currency instability, those whose outdated local banking systems slow down payroll,
+              and people who are adding cryptocurrencies to their investment portfolio.
+            </p>
+            <p>
+              In this report we sought insight and expertise from companies including Stripe,
+              tastytrade, Circle, Plaid, WorldPay, Shift4, Tap Global and Brazil Crypto Report, who
+              believe as we do that trust, simplicity and utility are the essential keys to driving the
+              next wave of adoption and unlocking the potential of crypto and blockchain
+              technology.
+            </p>
+        </div>
+      </div>
     </div>
   </div>
+
+  <!-- Footer -->
+  <Footer/>
 </body>
 </html>
