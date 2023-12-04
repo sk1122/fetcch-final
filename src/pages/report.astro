@@ -10,6 +10,7 @@ import icon3 from '@/public/assets/icons/twitter.svg'
 import icon4 from '@/public/assets/icons/mail.svg'
 import Footer from "@/components/footer.astro"
 import Modal from '@/components/modal.astro'
+import cefidefi from "@/public/assets/cefi-defi.jpeg"
 
 
 const indexData = ["Introduction","Overview of Banking Industry in India","Overview of Decentralised Finance (DeFi)","Convergence of CeFi and DeFi","Regulatory and Compliance Landscape","Market Dynamics and Consumer Behavior", "Risks and Security", "Future Prospects and Recommendations"]
@@ -61,26 +62,27 @@ const socialData = [{
   <!-- report page section -->
   <div class="container mt-[90px] mb-[50px]">
     <h1 class="text-6xl !leading-[72px] mb-8 font-bold">The Convergence of Centralized Finance (CeFi) and Decentralised Finance (DeFi)</h1>
-    <div class="w-full h-[391px] bg-slate-500 rounded-xl">
+    <div class="w-full  rounded-xl">
       <!-- Image here -->
+      <Image src={cefidefi} alt="demo_image" class="h-full" loading="lazy" />
     </div>
   </div>
-  <div class="container flex gap-[124px] mb-48">
+  <div class="container flex flex-col md:flex-row w-full gap-[124px] mb-48">
     <!-- Side bar -->
-    <div class="w-fit">
-      <button id="openModal" class="flex bg-primary text-white rounded-lg gap-[13px] h-[52px] items-center justify-center p-5 text-[18.2px] leading-[26px] font-bold overflow-hidden">
+    <div class="w-full md:w-fit">
+      <a href="https://docsend.com/view/pzevrzcv8khbjqtg" target="_blank" class="flex bg-primary text-white rounded-lg gap-[13px] h-[52px] items-center justify-center p-5 text-[18.2px] leading-[26px] font-bold overflow-hidden">
         <p class="shrink-0">Download Report</p>
         <Image src={DownloadIcon} alt="downloadicon" />
-      </button>
+      </a>
       <div class="pt-5 mx-[18px] mt-8">
         <!-- Download section -->
         <div class="mb-6">
           <div class="flex gap-4 items-center">
             <Image src={ClockIcon} alt={"clock icon"}/>
-            <p class="text-base font-semibold">7 min read</p>
+            <p class="text-base font-semibold">~20 min read</p>
           </div>
           <!-- grey divider -->
-          <div class="w-full h-2 bg-primary opacity-10 mt-4 rounded-xl"/>
+          <!-- <div class="w-full h-2 bg-primary opacity-10 mt-4 rounded-xl"/> -->
         </div>
         <!-- Index section -->
         <div class="py-6 flex flex-col gap-4 w-48 border-y index-section">
