@@ -1,0 +1,9 @@
+---
+import { Image } from "astro:assets"
+import DownloadIcon from '@/public/assets/download.svg'
+---
+
+<button id="openModal" class="flex bg-primary text-white rounded-lg gap-[13px] h-[52px] items-center justify-center p-5 text-[18.2px] leading-[26px] font-bold overflow-hidden" id="downloadPdf">
+  <p class="shrink-0">Download Report</p>
+  <Image src={DownloadIcon} alt="downloadicon" />
+</button>
