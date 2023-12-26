@@ -1,24 +1,39 @@
 ---
 import demo from "@/public/assets/demo.svg"
-import { Image } from "astro:assets";
+import { Image } from "astro:assets"
 ---
 
 <section class="w-full bg-white min-h-[440px] flex items-center">
   <div
     class="bg-[#263238] w-full max-w-[1220px] mx-auto relative min-h-[310px] lg:rounded-2xl"
   >
-  <Image src={demo} alt="demo_image" class="absolute inset-y-0 right-0 hidden lg:block w-1/2 xl:w-fit" loading="lazy" />
+    <Image
+      src={demo}
+      alt="demo_image"
+      class="absolute inset-y-0 right-0 hidden lg:block w-1/2 xl:w-fit"
+      loading="lazy"
+    />
     <div class="flex flex-col justify-center min-h-[310px] pl-8">
       <h3 class="text-white uppercase mb-4">Get Started</h3>
       <h2 class="text-2xl xl:text-4xl font-semibold text-white max-w-xl">
         Book a demo with Fetcch today and add payment request button
       </h2>
-      <a
-        href="https://calendly.com/ray-fetcch/fetcch-demo"
-        target="_blank"
-        class="rounded-full bg-primary px-6 py-3 text-white mt-8 text-sm hover:bg-primary/90 font-semibold inline-block max-w-fit"
-        >Book Demo</a
-      >
+      <div class="flex items-center flex-wrap gap-2">
+        <a
+          href="https://calendly.com/ray-fetcch/fetcch-demo"
+          target="_blank"
+          class="rounded-full bg-primary border-2 border-primary px-6 py-3 text-white mt-8 text-sm hover:bg-primary/90 font-semibold inline-block max-w-fit"
+        >
+          Book Demo
+        </a>
+        <a
+          href="https://docs.fetcch.xyz/"
+          target="_blank"
+          class="rounded-full bg-transparent border-2 border-primary px-6 py-3 text-white mt-8 text-sm hover:bg-primary/90 font-semibold inline-block max-w-fit"
+        >
+          Integrate
+        </a>
+      </div>
     </div>
   </div>
 </section>
