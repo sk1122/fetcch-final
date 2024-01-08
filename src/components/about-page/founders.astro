@@ -1,0 +1,29 @@
+---
+import { FOUNDERS } from "@/data/founders"
+import FounderCard from "./founder-card.astro"
+---
+
+<section class="bg-[#F6F9FC] py-16">
+  <div class="max-w-7xl mx-auto">
+    <h1
+      class="text-3xl lg:text-6xl font-semibold tracking-tight sm:text-6xl text-center text-[#FF7D1F]"
+    >
+      Meet the founders
+    </h1>
+    <p
+      class="mt-6 text-md lg:text-lg text-gray-600 md:max-w-6xl w-full text-center mx-auto"
+    >
+      Mandar and Satyam, the visionary founders of Fetcch, seamlessly blend
+      their expertise in technology and business acumen. With a shared passion
+      for innovation, they embarked on a journey to redefine the industry
+      landscape, steering their company towards unparalleled success.
+    </p>
+    <div class="flex items-center justify-evenly mt-16 flex-wrap">
+      {
+        FOUNDERS.map((founder, index) => {
+          return <FounderCard key={index} data={founder} />
+        })
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+---
+import FounderProfile from "@/components/founder-page/founder-profile.astro"
+import AboutFounder from "@/components/founder-page/about-founder.astro"
+import MainNav from "@/components/main-nav.astro"
+import Footer from "@/components/footer.astro"
+import { FOUNDERS } from "@/data/founders"
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="border-y-2 border-border sticky top-0 bg-white z-30">
+      <MainNav />
+    </header>
+    <div class="my-16 mx-4">
+      <FounderProfile data={FOUNDERS[1]} />
+      <AboutFounder
+        name={FOUNDERS[1].name}
+        firstParagraph="Satyam Kulkarni is the CTO and co-founder of Fetcch. He has a deep passion for distributed systems, compilers, and virtual machines; with a particular focus on their best implementations in the blockchain. His enthusiasm for decentralization and product development is at the heart of Fetcch's vision."
+        secondParagraph="Under Satyam’s technical guidance, Fetcch is pioneering the world's first decentralized payment connectivity network. This network is designed to integrate various entities across multiple blockchains, facilitating seamless communication and interactions. His technical prowess, exemplified in languages like Go, Rust, and Elixir, plays a critical role in scaling Web3 technologies that aims to make blockchain accessible and user-friendly for billions worldwide."
+        thirdParagraph="In his previous avatars, Satyam was the Co-Founder of Bayze and a lead blockchain developer at Komet. His experience spans building smart contract wallets, leading app development teams in Web3, and scaling an ad management tool for digital marketing agencies. His unique insights into blockchain application and development serves him well as he drives Fetcch's mission to make blockchain accessible and user-friendly globally."
+      />
+    </div>
+    <Footer />
+  </body>
+</html>
