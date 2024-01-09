@@ -1,0 +1,19 @@
+---
+import TeamCard from "./team-card.astro"
+import { TEAM } from "../../data/team.ts"
+---
+
+<section class="max-w-7xl mx-auto py-20 px-4">
+  <h1
+    class="text-3xl lg:text-6xl font-semibold tracking-tight sm:text-6xl text-center text-black"
+  >
+    Meet the Team
+  </h1>
+  <div class="flex items-center justify-evenly mt-16 gap-8 flex-wrap">
+    {
+      TEAM.map((member, index) => {
+        return <TeamCard key={index} data={member} />
+      })
+    }
+  </div>
+</section>

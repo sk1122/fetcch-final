@@ -1,0 +1,28 @@
+---
+import mesh from "@/public/assets/mesh.svg"
+import { Image } from "astro:assets"
+---
+
+<section class="w-full bg-white pb-20 h-[calc(100vh-64px)]">
+  <div class="relative isolate h-full">
+    <Image
+      src={mesh}
+      alt="hero backkground"
+      class="w-full hidden lg:flex h-full absolute inset-0 -z-10 mt-6"
+    />
+    <div class="container flex justify-center items-center h-full">
+      <div>
+        <h1
+          class="text-4xl font-bold tracking-tight sm:text-6xl text-center text-[#FF7D1F]"
+        >
+          About us
+        </h1>
+        <p
+          class="mt-5 text-2xl sm:text-6xl lg:text-6xl leading-8 text-black md:max-w-6xl w-full text-center font-bold"
+        >
+          We're on a mission to change the future of Payments
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

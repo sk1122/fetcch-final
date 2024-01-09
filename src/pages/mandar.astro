@@ -1,0 +1,31 @@
+---
+import FounderProfile from "@/components/founder-page/founder-profile.astro"
+import AboutFounder from "@/components/founder-page/about-founder.astro"
+import MainNav from "@/components/main-nav.astro"
+import Footer from "@/components/footer.astro"
+import { FOUNDERS } from "@/data/founders"
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="border-y-2 border-border sticky top-0 bg-white z-30">
+      <MainNav />
+    </header>
+    <div class="my-16">
+      <FounderProfile data={FOUNDERS[0]} />
+      <AboutFounder
+        name={FOUNDERS[0].name}
+        firstParagraph="Mandar Dange is the co-founder of Fetcch. At the helm of Fetcch, Mandar is instrumental in steering the company towards significant milestones.His vision for a seamless Web3 environment played a crucial role in the development of Fetcch's decentralized payments connectivity network, which is revolutionizing the way users interact with blockchain technologies."
+        secondParagraph="Leading conceptualizing and strategy, Mandar's commitment extends beyond just business growth. He is deeply invested in the development of digital identities and audience engagement. His strategic insights and innovative approaches have been instrumental in creating impactful digital solutions across his ventures."
+        thirdParagraph="Mandar's entrepreneurial spirit doesn't stop at Fetcch. He has also co-founded Jina Health and Influenco Studios, where he demonstrated exceptional skills in scaling products and driving companies towards substantial recurring revenues. Under his leadership, Jina Health scaled its health tech product to over 25,000 monthly active users, a testament to his ability to grow and nurture innovative projects."
+        fourthParagraph="His dedication to digital identity and audience development is a thread that runs through all his ventures. In every endeavor, Mandar brings a blend of strategic insight and a passion for technology, making him a driving force behind Fetcch's mission to simplify and enhance the Web3 experience for users worldwide."
+      />
+    </div>
+    <Footer />
+  </body>
+</html>
