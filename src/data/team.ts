@@ -37,7 +37,7 @@ export const TEAM: TeamData[] = [
   },
   {
     name: "Siddharth B.",
-    role: "Head Growth and partnership",
+    role: "Head Growth and Partnership",
     image: "/assets/team/Siddharth.png",
     twitter: "https://twitter.com/sidbharth",
     linkedin: "https://www.linkedin.com/in/siddharth-biju/"
@@ -58,7 +58,7 @@ export const TEAM: TeamData[] = [
   },
   {
     name: "Aditya Joshi",
-    role: "Social media Lead",
+    role: "Social Media Lead",
     image: "/assets/team/Aditya.jpg",
     twitter: "https://x.com/adityajshi",
     linkedin: "https://www.linkedin.com/in/aditya-joshi-582baa289/"

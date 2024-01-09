@@ -19,6 +19,6 @@ export const FOUNDERS = [
     email: "satyam@fetcch.xyz",
     twitter: "https://x.com/_sk1122",
     linkedin: "https://linkedin.com/in/satyam-kulkarni",
-    telegram: "https://t.me/ray_fetcch"
+    telegram: "https://t.me/cosmix_fetcch"
   }
 ]
