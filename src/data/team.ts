@@ -58,7 +58,7 @@ export const TEAM: TeamData[] = [
   },
   {
     name: "Aditya Joshi",
-    role: "Content writer",
+    role: "Social media Lead",
     image: "/assets/team/Aditya.jpg",
     twitter: "https://x.com/adityajshi",
     linkedin: "https://www.linkedin.com/in/aditya-joshi-582baa289/"
