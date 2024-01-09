@@ -3,7 +3,7 @@ import { FOUNDERS } from "@/data/founders"
 import FounderCard from "./founder-card.astro"
 ---
 
-<section class="bg-[#F6F9FC] py-16">
+<section class="bg-[#F6F9FC] py-16 px-4">
   <div class="max-w-7xl mx-auto">
     <h1
       class="text-3xl lg:text-6xl font-semibold tracking-tight sm:text-6xl text-center text-[#FF7D1F]"
@@ -18,7 +18,7 @@ import FounderCard from "./founder-card.astro"
       for innovation, they embarked on a journey to redefine the Payment
       industry landscape, steering Fetcch towards unparalleled success.
     </p>
-    <div class="flex items-center justify-evenly mt-16 flex-wrap">
+    <div class="flex items-center justify-evenly mt-16 flex-wrap gap-8">
       {
         FOUNDERS.map((founder, index) => {
           return <FounderCard key={index} data={founder} />
