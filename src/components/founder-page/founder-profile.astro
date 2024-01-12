@@ -2,10 +2,10 @@
 const { data } = Astro.props
 ---
 
-<section class="max-w-7xl mx-auto flex justify-between flex-wrap px-4">
+<section class="max-w-7xl mx-auto flex justify-between flex-wrap">
   <div class="md:w-1/2 lg:max-w-xl">
-    <h3 class="text-3xl lg:text-6xl font-bold">{data.name}</h3>
-    <p class="text-gray-500 text-md lg:text-lg mt-4">
+    <h3 class="text-3xl lg:text-6xl font-bold font-manrope">{data.name}</h3>
+    <p class="text-gray-500 text-md lg:text-lg mt-4 font-manrope">
       {data.bio}
     </p>
     <div class="flex items-center gap-4 mt-8">
@@ -98,7 +98,7 @@ const { data } = Astro.props
     class="bg-[#FFDCC3] rounded-3xl relative border border-[#FFCFAC] h-[400px] mt-8 md:mt-0"
   >
     <div class="bg-white px-4 py-2 w-fit rounded-lg absolute top-6 left-6">
-      <p class="text-[#FF7D1F] text-sm font-medium">{data.role}</p>
+      <p class="text-[#FF7D1F] text-sm font-medium font-manrope">{data.role}</p>
     </div>
     <img
       src={data.image}

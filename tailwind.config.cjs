@@ -13,6 +13,10 @@ module.exports = {
         border: "E6E7E9",
       },
     },
+    fontFamily: {
+      manrope: ["Manrope", "sans-serif"],
+      serif: ["Inter", "sans-serif"],
+    },
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
 }
