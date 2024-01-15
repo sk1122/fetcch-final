@@ -16,7 +16,7 @@ export const FOUNDERS = [
     role: "CTO & Co-Founder",
     image: "/assets/team/Satyam.png",
     route: "/satyam",
-    email: "satyam@fetcch.xyz",
+    email: "s@fetcch.xyz",
     twitter: "https://x.com/_sk1122",
     linkedin: "https://linkedin.com/in/satyam-kulkarni",
     telegram: "https://t.me/cosmix_fetcch"
