@@ -44,7 +44,7 @@ export const TEAM: TeamData[] = [
   },
   {
     name: "Rahul Kulkarni",
-    role: "DevRel & App developer",
+    role: "DevRel & App Developer",
     image: "/assets/team/Rahul.png",
     twitter: "https://twitter.com/0xrahulk",
     linkedin: "https://www.linkedin.com/in/0xrahul"
