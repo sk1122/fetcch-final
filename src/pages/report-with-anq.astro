@@ -1,172 +1,241 @@
 ---
 import MainNav from "../components/main-nav.astro"
-import DownloadIcon from '@/public/assets/download.svg'
-import ClockIcon from '@/public/assets/clock.svg'
-import Tag from '../components/report-page/tags.astro'
+import DownloadIcon from "@/public/assets/download.svg"
+import ClockIcon from "@/public/assets/clock.svg"
+import Tag from "../components/report-page/tags.astro"
 import { Image } from "astro:assets"
-import icon1 from '@/public/assets/icons/facebook.svg'
-import icon2 from '@/public/assets/icons/linkedin.svg'
-import icon3 from '@/public/assets/icons/twitter.svg'
-import icon4 from '@/public/assets/icons/mail.svg'
+import icon1 from "@/public/assets/icons/facebook.svg"
+import icon2 from "@/public/assets/icons/linkedin.svg"
+import icon3 from "@/public/assets/icons/twitter.svg"
+import icon4 from "@/public/assets/icons/mail.svg"
 import Footer from "@/components/footer.astro"
-import Modal from '@/components/modal.astro'
+import Modal from "@/components/modal.astro"
 import cefidefi from "@/public/assets/cefi-defi.jpeg"
+import Announcement from "@/components/announcement.astro"
 
-
-const indexData = ["Introduction","Overview of Banking Industry in India","Overview of Decentralised Finance (DeFi)","Convergence of CeFi and DeFi","Regulatory and Compliance Landscape","Market Dynamics and Consumer Behavior", "Risks and Security", "Future Prospects and Recommendations"]
-const TagsData = ["Centralized Finance","Decentralized Finance"]
-const socialData = [{
-  url:"https://www.facebook.com/sharer/sharer.php?u=https://fetcch.xyz/report",
-  logo:icon1
-},
-{
-  url:"https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Ffetcch.xyz/report&title=The+Convergence+of+Centralized+Finance+(CeFi)+and+Decentralised+Finance+(DeFi)+Report+2023&summary=d",
-  logo:icon2
-},
-{
-  url:"http://twitter.com/share?text=Read+The+Convergence+of+Centralized+Finance+(CeFi)+and+Decentralised+Finance+(DeFi)+Report+2023&url=https%3A%2F%2Ffetcch.xyz/report",
-  logo:icon3
-}
-,
-{
-  url:"mailto:hello@fetcch.xyz?subject=Read The Convergence of Centralized Finance (CeFi) and Decentralised Finance (DeFi)&body=https://fetcch.xyz/report",
-  logo:icon4
-}]
-
+const indexData = [
+  "Introduction",
+  "Overview of Banking Industry in India",
+  "Overview of Decentralised Finance (DeFi)",
+  "Convergence of CeFi and DeFi",
+  "Regulatory and Compliance Landscape",
+  "Market Dynamics and Consumer Behavior",
+  "Risks and Security",
+  "Future Prospects and Recommendations",
+]
+const TagsData = ["Centralized Finance", "Decentralized Finance"]
+const socialData = [
+  {
+    url: "https://www.facebook.com/sharer/sharer.php?u=https://fetcch.xyz/report",
+    logo: icon1,
+  },
+  {
+    url: "https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Ffetcch.xyz/report&title=The+Convergence+of+Centralized+Finance+(CeFi)+and+Decentralised+Finance+(DeFi)+Report+2023&summary=d",
+    logo: icon2,
+  },
+  {
+    url: "http://twitter.com/share?text=Read+The+Convergence+of+Centralized+Finance+(CeFi)+and+Decentralised+Finance+(DeFi)+Report+2023&url=https%3A%2F%2Ffetcch.xyz/report",
+    logo: icon3,
+  },
+  {
+    url: "mailto:hello@fetcch.xyz?subject=Read The Convergence of Centralized Finance (CeFi) and Decentralised Finance (DeFi)&body=https://fetcch.xyz/report",
+    logo: icon4,
+  },
+]
 ---
 
 <style>
-.highlight-index::before{
-  position: absolute;
-  content: '\2022';
-  left: -12px;
-}
+  .highlight-index::before {
+    position: absolute;
+    content: "\2022";
+    left: -12px;
+  }
 </style>
 
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Convergence of Centralized Finance (CeFi) and Decentralised Finance (DeFi)</title>
-  <meta name="description" content="Read our report on the current state and the convergence of centralized finance and decentralized finance">
-  <meta name="keywords" content="CeFi, Report, DeFi, India, 2023, Innovation">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      The Convergence of Centralized Finance (CeFi) and Decentralised Finance
+      (DeFi)
+    </title>
+    <meta
+      name="description"
+      content="Read our report on the current state and the convergence of centralized finance and decentralized finance"
+    />
+    <meta
+      name="keywords"
+      content="CeFi, Report, DeFi, India, 2023, Innovation"
+    />
+  </head>
+  <body>
     <!-- Modal -->
-    <Modal/>
-  <!-- Navbar -->
-  <header class="border-y-2 border-border sticky top-0 bg-white z-30">
-    <MainNav />
-  </header>
-  <!-- report page section -->
-  <div class="container mt-[90px] mb-[50px]">
-    <h1 class="text-6xl !leading-[72px] mb-8 font-bold">The Convergence of Centralized Finance (CeFi) and Decentralised Finance (DeFi)</h1>
-    <div class="w-full  rounded-xl">
-      <!-- Image here -->
-      <Image src={cefidefi} alt="demo_image" class="h-full" loading="lazy" />
+    <Modal />
+    <!-- Navbar -->
+    <Announcement />
+    <header class="border-y-2 border-border sticky top-0 bg-white z-30">
+      <MainNav />
+    </header>
+    <!-- report page section -->
+    <div class="container mt-[90px] mb-[50px]">
+      <h1 class="text-6xl !leading-[72px] mb-8 font-bold">
+        The Convergence of Centralized Finance (CeFi) and Decentralised Finance
+        (DeFi)
+      </h1>
+      <div class="w-full rounded-xl">
+        <!-- Image here -->
+        <Image src={cefidefi} alt="demo_image" class="h-full" loading="lazy" />
+      </div>
     </div>
-  </div>
-  <div class="container flex flex-col md:flex-row w-full gap-[124px] mb-48">
-    <!-- Side bar -->
-    <div class="w-full md:w-fit">
-      <a href="https://docsend.com/view/pzevrzcv8khbjqtg" target="_blank" class="flex bg-primary text-white rounded-lg gap-[13px] h-[52px] items-center justify-center p-5 text-[18.2px] leading-[26px] font-bold overflow-hidden">
-        <p class="shrink-0">Download Report</p>
-        <Image src={DownloadIcon} alt="downloadicon" />
-      </a>
-      <div class="pt-5 mx-[18px] mt-8">
-        <!-- Download section -->
-        <div class="mb-6">
-          <div class="flex gap-4 items-center">
-            <Image src={ClockIcon} alt={"clock icon"}/>
-            <p class="text-base font-semibold">~20 min read</p>
+    <div class="container flex flex-col md:flex-row w-full gap-[124px] mb-48">
+      <!-- Side bar -->
+      <div class="w-full md:w-fit">
+        <a
+          href="https://docsend.com/view/pzevrzcv8khbjqtg"
+          target="_blank"
+          class="flex bg-primary text-white rounded-lg gap-[13px] h-[52px] items-center justify-center p-5 text-[18.2px] leading-[26px] font-bold overflow-hidden"
+        >
+          <p class="shrink-0">Download Report</p>
+          <Image src={DownloadIcon} alt="downloadicon" />
+        </a>
+        <div class="pt-5 mx-[18px] mt-8">
+          <!-- Download section -->
+          <div class="mb-6">
+            <div class="flex gap-4 items-center">
+              <Image src={ClockIcon} alt={"clock icon"} />
+              <p class="text-base font-semibold">~20 min read</p>
+            </div>
+            <!-- grey divider -->
+            <!-- <div class="w-full h-2 bg-primary opacity-10 mt-4 rounded-xl"/> -->
           </div>
-          <!-- grey divider -->
-          <!-- <div class="w-full h-2 bg-primary opacity-10 mt-4 rounded-xl"/> -->
-        </div>
-        <!-- Index section -->
-        <div class="py-6 flex flex-col gap-4 w-48 border-y index-section">
-          {
-            indexData.map((ele,idx)=>
-            <div class={`text-sm font-semibold text-black opacity-50 ${idx == 0 ? 'text-primary opacity-100 highlight-index relative':""} `}>
-              {ele}
-              </div>
-            )
-          }
-        </div>
-        <!-- Tags section -->
-        <div class="py-6 border-b">
-          <h2 class="text-sm uppercase font-semibold">
-            Tags
-          </h2>
-          <div class="flex flex-col gap-2 mt-4">
+          <!-- Index section -->
+          <div class="py-6 flex flex-col gap-4 w-48 border-y index-section">
             {
-              TagsData.map((tag,idx)=>
-              <Tag label={tag} />
-              )
-            }
-          </div>
-        </div>
-        <div class="my-6">
-          <p class="uppercase text-sm font-semibold">
-            Share the article
-          </p>
-          <div class="flex gap-4 mt-4">
-            {
-              socialData.map((ele,idx)=>(
-              <a href={ele.url} target="_blank">
-              <Image src={ele.logo} class={"bg-primary rounded-full w-8 h-8 p-[6px]"} alt={"social media icon"}/>
-            </a>
+              indexData.map((ele, idx) => (
+                <div
+                  class={`text-sm font-semibold text-black opacity-50 ${
+                    idx == 0
+                      ? "text-primary opacity-100 highlight-index relative"
+                      : ""
+                  } `}
+                >
+                  {ele}
+                </div>
               ))
             }
           </div>
+          <!-- Tags section -->
+          <div class="py-6 border-b">
+            <h2 class="text-sm uppercase font-semibold">Tags</h2>
+            <div class="flex flex-col gap-2 mt-4">
+              {TagsData.map((tag, idx) => <Tag label={tag} />)}
+            </div>
+          </div>
+          <div class="my-6">
+            <p class="uppercase text-sm font-semibold">Share the article</p>
+            <div class="flex gap-4 mt-4">
+              {
+                socialData.map((ele, idx) => (
+                  <a href={ele.url} target="_blank">
+                    <Image
+                      src={ele.logo}
+                      class={"bg-primary rounded-full w-8 h-8 p-[6px]"}
+                      alt={"social media icon"}
+                    />
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Text section -->
+      <div>
+        <h1 class="text-[40px] leading-[50px] font-bold">Introduction</h1>
+        <div class="mt-[27px]">
+          <div class="flex flex-col gap-[22px] text-[20px] leading-[30px]">
+            <p class="font-semibold">Background</p>
+            <p>
+              The world of finance is undergoing a significant transformation
+              with the rise of Decentralised Finance (DeFi) and its convergence
+              with Centralised Finance (CeFi). DeFi represents a paradigm shift
+              in the way financial services are accessed, utilising blockchain
+              technology and smart contracts to create a progressively
+              decentralised ecosystem.
+            </p>
+            <p>
+              This research report aims to provide a comprehensive understanding
+              of the convergence of CeFi and DeFi, its impact on the financial
+              landscape in India, and the regulatory challenges and
+              opportunities associated with this convergence.
+            </p>
+            <p class="font-semibold">Research Objectives</p>
+            <p>The objectives of this research report are as follows:</p>
+            <ul class="list-disc">
+              <li>Define and explore the key characteristics of DeFi</li>
+              <li>
+                Analyse the technological underpinnings of DeFi, including
+                blockchain and smart contracts
+              </li>
+              <li>
+                Examine the global growth of DeFi and its inception in the
+                Indian market
+              </li>
+              <li>Conduct a comparative analysis of CeFi and DeFi</li>
+              <li>
+                Assess the potential for convergence between CeFi and DeFi,
+                highlighting opportunities and challenges
+              </li>
+              <li>
+                Present case studies or examples of convergence both globally
+                and in India
+              </li>
+              <li>
+                Evaluate the impact of this convergence on traditional financial
+                institutions and systems
+              </li>
+              <li>
+                Provide an overview of current regulations affecting DeFi and
+                CeFi in India
+              </li>
+              <li>Discuss the challenges in regulating DeFi</li>
+              <li>
+                Offer international regulatory perspectives and lessons for
+                India
+              </li>
+              <li>
+                Propose regulatory frameworks or reforms to address the
+                convergence
+              </li>
+              <li>Analyse market adoption trends in India for CeFi and DeFi</li>
+              <li>
+                Explore the impact of this convergence on financial inclusion
+                and economic growth
+              </li>
+              <li>
+                Assess the risks associated with CeFi and DeFi and suggest
+                mitigation strategies
+              </li>
+              <li>
+                Forecast the growth and development of CeFi and DeFi in India
+              </li>
+              <li>
+                Provide recommendations for stakeholders, including government,
+                investors, and financial institutions
+              </li>
+              <li>
+                Identify potential areas for innovation and investment in the
+                evolving financial landscape.
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-    <!-- Text section -->
-    <div>
-      <h1 class="text-[40px] leading-[50px] font-bold">
-        Introduction
-      </h1>
-      <div class="mt-[27px]">
-        <div class="flex flex-col gap-[22px] text-[20px] leading-[30px]">
-          <p class="font-semibold">Background</p>
-<p>          
-The world of finance is undergoing a significant transformation with the rise of Decentralised Finance (DeFi) and its convergence with Centralised Finance (CeFi). DeFi represents a paradigm shift in the way financial services are accessed, utilising blockchain technology and smart contracts to create a progressively decentralised ecosystem. 
-</p>
-<p>
-This research report aims to provide a comprehensive understanding of the convergence of CeFi and DeFi, its impact on the financial landscape in India, and the regulatory challenges and opportunities associated with this convergence.
-</p>
-<p class="font-semibold">Research Objectives</p>
-<p>
-The objectives of this research report are as follows:
-</p>
-<ul class="list-disc">
-  <li>Define and explore the key characteristics of DeFi</li>
-  <li>Analyse the technological underpinnings of DeFi, including blockchain and smart contracts</li>
-  <li>Examine the global growth of DeFi and its inception in the Indian market</li>
-  <li>Conduct a comparative analysis of CeFi and DeFi</li>
-  <li>Assess the potential for convergence between CeFi and DeFi, highlighting opportunities and challenges</li>
-  <li>Present case studies or examples of convergence both globally and in India</li>
-  <li>Evaluate the impact of this convergence on traditional financial institutions and systems</li>
-  <li>Provide an overview of current regulations affecting DeFi and CeFi in India</li>
-  <li>Discuss the challenges in regulating DeFi</li>
-  <li>Offer international regulatory perspectives and lessons for India</li>
-  <li>Propose regulatory frameworks or reforms to address the convergence</li>
-  <li>Analyse market adoption trends in India for CeFi and DeFi</li>
-  <li>Explore the impact of this convergence on financial inclusion and economic growth</li>
-  <li>Assess the risks associated with CeFi and DeFi and suggest mitigation strategies</li>
-  <li>Forecast the growth and development of CeFi and DeFi in India</li>
-  <li>Provide recommendations for stakeholders, including government, investors, and financial institutions</li>
-  <li>Identify potential areas for innovation and investment in the evolving financial landscape.</li>
-</ul>
 
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <Footer/>
-</body>
+    <!-- Footer -->
+    <Footer />
+  </body>
 </html>

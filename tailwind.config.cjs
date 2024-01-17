@@ -15,7 +15,7 @@ module.exports = {
     },
     fontFamily: {
       manrope: ["Manrope", "sans-serif"],
-      serif: ["Inter", "sans-serif"],
+      inter: ["Inter", "sans-serif"],
     },
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
